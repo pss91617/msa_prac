@@ -1,0 +1,5 @@
+# 프로젝트 제외 경로
+/msa_prac_boot/target/
+/msa_prac_domain/target/
+/msa_prac_service/target/
+/msa_prac_store/target/

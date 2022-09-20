@@ -1,0 +1,9 @@
+server:
+  port: 8086
+  servlet:
+    context-path: /
+
+spring:
+  messages:
+    basename: messages/response-messages
+    encoding: UTF-8
