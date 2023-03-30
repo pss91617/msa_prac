@@ -1,76 +1,22 @@
 package com.msa.prac.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
+@RequiredArgsConstructor
 @RestController
 public class controller {
 
-    @PostMapping("/nanoTimeTest")
-    public void nanoTimeTest() {
+    @GetMapping("/DockerTest")
+    public void DockerTest() {
 
-        int cnt = 0;// 횟수
-        long start = System.nanoTime();
-
-
-        //TODO: 로직
-
-        for(int i = 0; i < 500000; i++){
-
-            cnt++;
-        }
-
-
-
-
-        //TODO: 로직 끝
-
-
-        long end = System.nanoTime();
-        long result = end - start;
-        System.out.println("속도 : " + result / cnt);
+        System.out.println("aa");
     }
-
-
-
-
-
 
 
 }
 
-
-
-
-//
-//    public static long testFor(Map<Integer, Integer> map1, long runTime){
-//        int size = map1.size();
-//        long result = 0;
-//        long runTimeTmp = runTime;
-//
-//        while(0 < runTimeTmp--){
-//            long start = System.nanoTime();
-//            for(int i=0; i<size; i++){
-//                Integer integer = map1.get(i);
-//                integer = 1;
-//            }
-//            long end = System.nanoTime();
-//            result += (end-start);
-//        }
-//        return result / runTime;
-//    }
-//    public static long testForEach(Map<Integer, Integer> map1, long runTime){
-//        int size = map1.size();
-//        long result = 0;
-//        long runTimeTmp = runTime;
-//        while(0 < runTimeTmp--){
-//            long start = System.nanoTime();
-//            for(Integer integer : map1){
-//                integer = 1;
-//            }
-//            long end = System.nanoTime();
-//            result += (end-start);
-//        }
-//        return result / runTime;
-//    }
 
