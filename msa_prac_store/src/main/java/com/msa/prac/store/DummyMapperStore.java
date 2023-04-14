@@ -1,4 +1,4 @@
-package com.my.test.store.mapper;
+package com.msa.prac.store;
 
 import org.springframework.context.annotation.Description;
 

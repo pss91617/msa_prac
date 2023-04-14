@@ -1,4 +1,4 @@
-package com.my.test.store.config;
+package com.msa.prac.config;
 
 import org.springframework.context.annotation.Description;
 

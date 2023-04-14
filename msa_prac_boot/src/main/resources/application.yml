@@ -3,7 +3,38 @@ server:
   servlet:
     context-path: /
 
+#package
+package: com.msa.prac
+
 spring:
+  datasource:
+    hikari:
+      driver-class-name: org.mariadb.jdbc.Driver
+      jdbc-url: jdbc:mariadb://172.16.10.176:3306/test?characterEncoding=UTF-8&passwordCharacterEncoding=utf8
+      username: root
+      password: password
   messages:
     basename: messages/response-messages
     encoding: UTF-8
+  # RabbitMQ Config
+  rabbitmq:
+    host: 172.16.10.176
+    port: 5672
+    username: aimir
+    password: aimirxhdgkqvmffotvha
+  cloud:
+    stream:
+      bindings:
+        ifLpChannel:
+          destination: green.if.lp
+          group: green-if-group
+        ifBillingChannel:
+          destination: green.if.billing
+          group: green-if-group
+    default:
+      content-type: application/json
+
+#mybatis config
+mybatis:
+  config-location: classpath:mybatis/mapperConfig/MapperConfig.xml
+  sql-location: classpath:/mybatis/mariadb/*.xml
